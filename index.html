@@ -1,246 +1,818 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Subitchaka Nagasundaram | AI & Digital Growth Leader</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-weight/6.4.0/css/all.min.css">
-    <style>
-        :root {
-            --bg-main: #f8fafc;
-            --bg-card: #ffffff;
-            --text-dark: #0f172a;
-            --text-muted: #475569;
-            --border-color: #cbd5e1;
-            --accent-blue: #2563eb;
-            --accent-green: #16a34a;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Subitchaka Nagasundaram | Digital Growth Consultant</title>
+  <meta name="description" content="Senior Digital Growth Consultant specialising in E-Commerce, Fintech, and B2B SaaS — driving measurable revenue through paid media, automation, and lifecycle strategy." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+    :root {
+      --sand:      #F7F3EE;
+      --sand2:     #EDE7DF;
+      --forest:    #1C3A2E;
+      --forest2:   #254D3C;
+      --rose:      #D4846E;
+      --rose-lt:   #EFC4B8;
+      --sage:      #6B8F76;
+      --sage-lt:   #C2D5C8;
+      --ink:       #1A1A1A;
+      --mid:       #5A5A5A;
+      --light:     #9A9A9A;
+      --rule:      #DDD7CF;
+      --white:     #FFFFFF;
+      --card:      #FFFFFF;
+    }
 
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            background-color: var(--bg-main);
-            color: var(--text-dark);
-            line-height: 1.5;
-            padding: 40px 20px;
-        }
+    html { scroll-behavior: smooth; }
 
-        .bento-grid {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(12, 1fr);
-            gap: 20px;
-        }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--sand);
+      color: var(--ink);
+      overflow-x: hidden;
+    }
 
-        /* Common Box Styling (Premium Bento Style) */
-        .box {
-            background-color: var(--bg-card);
-            border: 1px solid var(--border-color);
-            border-radius: 16px;
-            padding: 30px;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
+    /* ── NAV ──────────────────────────────────────────── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 20px 64px;
+      background: rgba(247,243,238,0.92);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--rule);
+    }
+    .nav-logo {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700; font-size: 1.1rem;
+      color: var(--forest); letter-spacing: 0.01em;
+      text-decoration: none;
+    }
+    .nav-logo span { color: var(--rose); }
+    .nav-links { display: flex; gap: 36px; list-style: none; align-items: center; }
+    .nav-links a {
+      font-size: 0.8rem; font-weight: 500;
+      color: var(--mid); text-decoration: none;
+      letter-spacing: 0.08em; text-transform: uppercase;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--forest); }
+    .nav-cta {
+      background: var(--forest) !important;
+      color: var(--sand) !important;
+      padding: 9px 22px; border-radius: 40px;
+      font-size: 0.8rem !important; letter-spacing: 0.04em !important;
+      transition: background 0.2s !important;
+    }
+    .nav-cta:hover { background: var(--forest2) !important; color: var(--sand) !important; }
 
-        .box:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.08);
-        }
+    /* ── HERO ─────────────────────────────────────────── */
+    .hero {
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      padding: 120px 64px 80px;
+      gap: 80px;
+      position: relative;
+    }
+    .hero-left { max-width: 560px; }
+    .hero-eyebrow {
+      display: inline-flex; align-items: center; gap: 10px;
+      font-size: 0.75rem; font-weight: 600;
+      letter-spacing: 0.16em; text-transform: uppercase;
+      color: var(--sage);
+      margin-bottom: 28px;
+    }
+    .hero-eyebrow-dot {
+      width: 6px; height: 6px; border-radius: 50%;
+      background: var(--rose); display: inline-block;
+    }
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.6rem, 4.5vw, 3.8rem);
+      font-weight: 700; line-height: 1.15;
+      color: var(--forest); margin-bottom: 28px;
+      letter-spacing: -0.01em;
+    }
+    .hero h1 em {
+      font-style: italic; color: var(--rose);
+    }
+    .hero-sub {
+      font-size: 1.05rem; font-weight: 300; line-height: 1.8;
+      color: var(--mid); margin-bottom: 48px;
+      max-width: 460px;
+    }
+    .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
 
-        /* Grid Layouts for Boxes */
-        .box-hero { grid-column: span 8; display: flex; flex-direction: column; justify-content: center; }
-        .box-contact { grid-column: span 4; background-color: var(--text-dark); color: #ffffff; }
-        .box-metrics { grid-column: span 4; display: flex; flex-direction: column; justify-content: space-between; }
-        .box-skills { grid-column: span 8; }
-        .box-experience { grid-column: span 12; }
-        .box-consulting { grid-column: span 7; }
-        .box-education { grid-column: span 5; }
+    .btn-primary {
+      background: var(--forest); color: var(--sand);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 500; font-size: 0.88rem;
+      padding: 14px 32px; border-radius: 40px;
+      text-decoration: none; letter-spacing: 0.02em;
+      transition: background 0.2s, transform 0.15s;
+    }
+    .btn-primary:hover { background: var(--forest2); transform: translateY(-1px); }
+    .btn-ghost {
+      background: transparent;
+      border: 1.5px solid var(--rule);
+      color: var(--mid);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 500; font-size: 0.88rem;
+      padding: 14px 32px; border-radius: 40px;
+      text-decoration: none; letter-spacing: 0.02em;
+      transition: border-color 0.2s, color 0.2s, transform 0.15s;
+    }
+    .btn-ghost:hover { border-color: var(--forest); color: var(--forest); transform: translateY(-1px); }
 
-        /* Component Typography */
-        .box-hero h1 { font-size: 2.75rem; font-weight: 800; letter-spacing: -0.04em; line-height: 1.1; margin-bottom: 15px; }
-        .box-hero h1 span { color: var(--accent-blue); }
-        .box-hero p { font-size: 1.15rem; color: var(--text-muted); font-weight: 400; max-width: 90%; }
+    /* Hero right — value card stack */
+    .hero-right {
+      display: flex; flex-direction: column; gap: 16px;
+    }
+    .hero-value-card {
+      background: var(--white);
+      border: 1px solid var(--rule);
+      border-radius: 14px;
+      padding: 24px 28px;
+      display: flex; align-items: flex-start; gap: 18px;
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+    .hero-value-card:hover { box-shadow: 0 8px 32px rgba(28,58,46,0.08); transform: translateY(-2px); }
+    .hero-value-card:nth-child(2) { margin-left: 32px; }
+    .hero-value-card:nth-child(3) { margin-left: 16px; }
+    .hvc-icon {
+      width: 44px; height: 44px; border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.2rem; flex-shrink: 0;
+    }
+    .hvc-icon.rose  { background: #FAE8E3; }
+    .hvc-icon.sage  { background: #DDE9E1; }
+    .hvc-icon.sand  { background: #EDE7DF; }
+    .hvc-body {}
+    .hvc-label {
+      font-size: 0.7rem; font-weight: 600;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--light); margin-bottom: 4px;
+    }
+    .hvc-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1rem; font-weight: 700;
+      color: var(--forest); margin-bottom: 4px;
+    }
+    .hvc-desc {
+      font-size: 0.82rem; color: var(--mid); line-height: 1.5;
+    }
 
-        .section-title { font-size: 1.4rem; font-weight: 700; margin-bottom: 20px; display: flex; align-items: center; gap: 10px; letter-spacing: -0.02em; }
-        .section-title i { color: var(--accent-blue); }
+    /* ── STATS STRIP ──────────────────────────────────── */
+    .stats-strip {
+      background: var(--forest);
+      padding: 52px 64px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+    }
+    .stat-item {
+      text-align: center;
+      padding: 0 24px;
+      border-right: 1px solid rgba(255,255,255,0.1);
+    }
+    .stat-item:last-child { border-right: none; }
+    .stat-number {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.8rem; font-weight: 700;
+      color: var(--rose-lt); line-height: 1;
+      margin-bottom: 8px;
+    }
+    .stat-label {
+      font-size: 0.75rem; font-weight: 400;
+      color: rgba(247,243,238,0.55);
+      letter-spacing: 0.06em; line-height: 1.5;
+    }
 
-        /* Contact Details Custom Styling */
-        .box-contact h2 { color: #ffffff; font-size: 1.5rem; margin-bottom: 20px; }
-        .contact-item { display: flex; align-items: center; gap: 12px; margin-bottom: 15px; font-size: 0.95rem; }
-        .contact-item a { color: #93c5fd; text-decoration: none; font-weight: 500; }
-        .contact-item a:hover { text-decoration: underline; }
+    /* ── GENERIC SECTION WRAP ─────────────────────────── */
+    section { padding: 100px 64px; }
+    .section-label {
+      font-size: 0.72rem; font-weight: 600;
+      letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--rose); margin-bottom: 12px;
+    }
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.9rem, 3vw, 2.6rem);
+      font-weight: 700; color: var(--forest);
+      margin-bottom: 16px; line-height: 1.2;
+    }
+    .section-sub {
+      font-size: 1rem; font-weight: 300;
+      color: var(--mid); line-height: 1.75;
+      max-width: 560px; margin-bottom: 64px;
+    }
 
-        /* Metrics Pill / Badges */
-        .metric-row { border-bottom: 1px solid var(--border-color); padding: 12px 0; display: flex; justify-content: space-between; align-items: center; }
-        .metric-row:last-child { border: none; padding-bottom: 0; }
-        .metric-value { font-size: 1.2rem; font-weight: 700; color: var(--accent-green); }
-        .metric-label { font-size: 0.95rem; color: var(--text-muted); font-weight: 500; }
+    /* ── INDUSTRIES / IMPACT ──────────────────────────── */
+    #impact { background: var(--sand); }
+    .impact-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .impact-card {
+      background: var(--white);
+      border: 1px solid var(--rule);
+      border-radius: 16px;
+      padding: 36px 32px;
+      position: relative; overflow: hidden;
+      transition: box-shadow 0.25s, transform 0.2s;
+    }
+    .impact-card::before {
+      content: '';
+      position: absolute; top: 0; left: 0; right: 0;
+      height: 3px;
+    }
+    .impact-card.rose::before  { background: var(--rose); }
+    .impact-card.sage::before  { background: var(--sage); }
+    .impact-card.forest::before { background: var(--forest); }
+    .impact-card:hover { box-shadow: 0 12px 40px rgba(28,58,46,0.1); transform: translateY(-3px); }
 
-        /* Skills Tag Layout */
-        .skills-container { display: flex; flex-wrap: wrap; gap: 10px; }
-        .skill-tag { background-color: #f1f5f9; border: 1px solid var(--border-color); color: var(--text-dark); padding: 6px 14px; border-radius: 20px; font-size: 0.9rem; font-weight: 500; }
+    .ic-sector {
+      font-size: 0.7rem; font-weight: 600;
+      letter-spacing: 0.16em; text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+    .ic-sector.rose   { color: var(--rose); }
+    .ic-sector.sage   { color: var(--sage); }
+    .ic-sector.forest { color: var(--forest); }
 
-        /* Professional Work Layout */
-        .job-block { border-bottom: 1px solid var(--border-color); padding: 25px 0; }
-        .job-block:first-child { padding-top: 0; }
-        .job-block:last-child { border: none; padding-bottom: 0; }
-        .job-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 10px; }
-        .job-title { font-size: 1.2rem; font-weight: 700; color: var(--text-dark); }
-        .job-company { color: var(--accent-blue); font-weight: 600; font-size: 1rem; }
-        .job-date { font-size: 0.85rem; background-color: #f1f5f9; padding: 4px 10px; border-radius: 6px; font-weight: 600; color: var(--text-muted); }
-        .job-desc { list-style-position: inside; color: var(--text-muted); font-size: 0.95rem; margin-top: 10px; }
-        .job-desc li { margin-bottom: 6px; }
+    .ic-headline {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.15rem; font-weight: 700;
+      color: var(--forest); line-height: 1.35;
+      margin-bottom: 16px;
+    }
+    .ic-body {
+      font-size: 0.85rem; color: var(--mid);
+      line-height: 1.7; margin-bottom: 24px;
+    }
+    .ic-metrics {
+      display: flex; flex-wrap: wrap; gap: 10px;
+      border-top: 1px solid var(--rule);
+      padding-top: 20px;
+    }
+    .ic-metric {
+      background: var(--sand);
+      border-radius: 6px; padding: 6px 12px;
+      font-size: 0.78rem; font-weight: 600;
+      color: var(--forest);
+    }
 
-        /* Responsive Breakpoints */
-        @media (max-width: 1024px) {
-            .box-hero { grid-column: span 12; }
-            .box-contact { grid-column: span 12; }
-            .box-metrics { grid-column: span 12; }
-            .box-skills { grid-column: span 12; }
-            .box-consulting { grid-column: span 12; }
-            .box-education { grid-column: span 12; }
-        }
-    </style>
+    /* ── EXPERTISE / SERVICES ─────────────────────────── */
+    #expertise { background: var(--sand2); }
+    .expertise-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+    .expertise-card {
+      background: var(--white);
+      border: 1px solid var(--rule);
+      border-radius: 14px;
+      padding: 32px 36px;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 20px;
+      align-items: start;
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+    .expertise-card:hover { box-shadow: 0 8px 28px rgba(28,58,46,0.08); transform: translateY(-2px); }
+    .exp-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem; font-weight: 700;
+      color: var(--rose-lt); line-height: 1;
+      padding-top: 4px;
+    }
+    .exp-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.05rem; font-weight: 700;
+      color: var(--forest); margin-bottom: 10px;
+    }
+    .exp-body {
+      font-size: 0.85rem; color: var(--mid);
+      line-height: 1.7;
+    }
+    .exp-tags {
+      display: flex; flex-wrap: wrap; gap: 6px;
+      margin-top: 14px;
+    }
+    .exp-tag {
+      font-size: 0.7rem; font-weight: 500;
+      background: var(--sand); color: var(--sage);
+      border-radius: 4px; padding: 3px 9px;
+      letter-spacing: 0.04em;
+    }
+
+    /* ── PORTFOLIO ────────────────────────────────────── */
+    #portfolio { background: var(--sand); }
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .portfolio-card {
+      background: var(--white);
+      border: 1px solid var(--rule);
+      border-radius: 14px; overflow: hidden;
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+    .portfolio-card:hover { box-shadow: 0 10px 36px rgba(28,58,46,0.1); transform: translateY(-3px); }
+    .pc-thumb {
+      height: 160px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 2.4rem;
+    }
+    .pc-thumb.rose-bg  { background: #FAE8E3; }
+    .pc-thumb.sage-bg  { background: #DDE9E1; }
+    .pc-thumb.sand-bg  { background: #EDE7DF; }
+    .pc-body { padding: 22px 24px 26px; }
+    .pc-tag {
+      font-size: 0.68rem; font-weight: 600;
+      letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--rose); margin-bottom: 8px;
+    }
+    .pc-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 0.98rem; font-weight: 700;
+      color: var(--forest); margin-bottom: 8px; line-height: 1.3;
+    }
+    .pc-desc { font-size: 0.82rem; color: var(--mid); line-height: 1.6; }
+    .pc-badge {
+      display: inline-block; margin-top: 14px;
+      font-size: 0.68rem; font-weight: 600;
+      color: var(--light); background: var(--sand);
+      border-radius: 4px; padding: 3px 10px;
+      letter-spacing: 0.08em; text-transform: uppercase;
+    }
+
+    /* ── CONTACT ──────────────────────────────────────── */
+    #contact {
+      background: var(--forest);
+      text-align: center;
+    }
+    #contact .section-label { color: var(--rose-lt); }
+    #contact .section-title { color: var(--sand); margin-bottom: 16px; }
+    #contact .section-sub   { color: rgba(247,243,238,0.6); margin: 0 auto 48px; }
+
+    .contact-ctas { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+    .btn-light {
+      background: var(--sand); color: var(--forest);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 600; font-size: 0.88rem;
+      padding: 14px 36px; border-radius: 40px;
+      text-decoration: none; letter-spacing: 0.02em;
+      transition: background 0.2s, transform 0.15s;
+    }
+    .btn-light:hover { background: var(--white); transform: translateY(-1px); }
+    .btn-ghost-lt {
+      background: transparent;
+      border: 1.5px solid rgba(247,243,238,0.3);
+      color: rgba(247,243,238,0.75);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 500; font-size: 0.88rem;
+      padding: 14px 36px; border-radius: 40px;
+      text-decoration: none; letter-spacing: 0.02em;
+      transition: border-color 0.2s, color 0.2s, transform 0.15s;
+    }
+    .btn-ghost-lt:hover { border-color: var(--sand); color: var(--sand); transform: translateY(-1px); }
+
+    /* ── FOOTER ───────────────────────────────────────── */
+    footer {
+      background: #152E23;
+      padding: 24px 64px;
+      display: flex; align-items: center; justify-content: space-between;
+      border-top: 1px solid rgba(255,255,255,0.07);
+    }
+    footer p { font-size: 0.77rem; color: rgba(247,243,238,0.35); }
+    .footer-logo {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700; font-size: 0.95rem;
+      color: var(--rose-lt);
+    }
+
+    /* ── FADE IN ──────────────────────────────────────── */
+    .fade-up {
+      opacity: 0; transform: translateY(22px);
+      transition: opacity 0.65s ease, transform 0.65s ease;
+    }
+    .fade-up.visible { opacity: 1; transform: translateY(0); }
+
+    /* ── RESPONSIVE ───────────────────────────────────── */
+    @media (max-width: 900px) {
+      nav { padding: 16px 24px; }
+      .nav-links { display: none; }
+      .hero { grid-template-columns: 1fr; padding: 110px 24px 60px; gap: 48px; }
+      .hero-right .hero-value-card:nth-child(2),
+      .hero-right .hero-value-card:nth-child(3) { margin-left: 0; }
+      .stats-strip { grid-template-columns: repeat(2,1fr); padding: 40px 24px; gap: 32px; }
+      .stat-item { border-right: none; }
+      section { padding: 64px 24px; }
+      .impact-grid,
+      .portfolio-grid { grid-template-columns: 1fr; }
+      .expertise-grid { grid-template-columns: 1fr; }
+      footer { flex-direction: column; gap: 10px; padding: 20px 24px; text-align: center; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .fade-up { opacity: 1; transform: none; transition: none; }
+    }
+  </style>
 </head>
 <body>
 
-    <div class="bento-grid">
-        
-        <!-- BOX 1: HERO / STATEMENT -->
-        <div class="box box-hero">
-            <h1>Subitchaka <span>Nagasundaram</span></h1>
-            <p>Performance Marketing Lead & Data Strategist with 10+ years scaling e-commerce growth, building n8n workflows, and executing technical data architectures.</p>
-        </div>
+  <!-- NAV -->
+  <nav>
+    <a href="#" class="nav-logo">Subitchaka<span>.</span></a>
+    <ul class="nav-links">
+      <li><a href="#impact">Industries</a></li>
+      <li><a href="#expertise">Expertise</a></li>
+      <li><a href="#portfolio">Work</a></li>
+      <li><a href="#contact" class="nav-cta">Work With Me</a></li>
+    </ul>
+  </nav>
 
-        <!-- BOX 2: BLACK CARD CONTACT -->
-        <div class="box box-contact">
-            <h2>Let's Connect</h2>
-            <div class="contact-item">
-                <i class="fa-solid fa-envelope"></i>
-                <a href="mailto:subis.na@gmail.com">subis.na@gmail.com</a>
-            </div>
-            <div class="contact-item">
-                <i class="fa-brands fa-linkedin"></i>
-                <a href="https://linkedin.com/in/subitchaka-n-318394120" target="_blank">LinkedIn Profile</a>
-            </div>
-            <div class="contact-item">
-                <i class="fa-solid fa-location-dot"></i>
-                <span>Brampton, Ontario, Canada</span>
-            </div>
-        </div>
-
-        <!-- BOX 3: PERFORMANCE METRICS HIGH-LIGHTS -->
-        <div class="box box-metrics">
-            <div class="section-title"><i class="fa-solid fa-chart-line"></i> Validated Impact</div>
-            <div>
-                <div class="metric-row">
-                    <span class="metric-label">Operational Overhead</span>
-                    <span class="metric-value">-40%</span>
-                </div>
-                <div class="metric-row">
-                    <span class="metric-label">Fintech Platfrom ROI Growth</span>
-                    <span class="metric-value">+130%</span>
-                </div>
-                <div class="metric-row">
-                    <span class="metric-label">Pardot Email Open Rate</span>
-                    <span class="metric-value">65%</span>
-                </div>
-                <div class="metric-row">
-                    <span class="metric-label">Organic Traffic Increase</span>
-                    <span class="metric-value">+40%</span>
-                </div>
-            </div>
-        </div>
-
-        <!-- BOX 4: TECH STACK / COMPETENCIES -->
-        <div class="box box-skills">
-            <div class="section-title"><i class="fa-solid fa-screwdriver-wrench"></i> Core Capabilities & Stack</div>
-            <div class="skills-container">
-                <div class="skill-tag">n8n Automation</div>
-                <div class="skill-tag">AI Agent Frameworks</div>
-                <div class="skill-tag">Google Tag Manager (GTM)</div>
-                <div class="skill-tag">Google Analytics 4 (GA4)</div>
-                <div class="skill-tag">Meta & TikTok Ads</div>
-                <div class="skill-tag">Google Shopping & Merchant</div>
-                <div class="skill-tag">Salesforce Pardot</div>
-                <div class="skill-tag">Technical SEO Architecture</div>
-                <div class="skill-tag">Looker Studio / Power BI</div>
-                <div class="skill-tag">SQL & Attribution Tracking</div>
-            </div>
-        </div>
-
-        <!-- BOX 5: CORE ROLES WORK TIMELINE -->
-        <div class="box box-experience">
-            <div class="section-title"><i class="fa-solid fa-briefcase"></i> Selected Professional History</div>
-            
-            <div class="job-block">
-                <div class="job-header">
-                    <div>
-                        <div class="job-title">Head of Digital Growth & E-Commerce Strategy</div>
-                        <div class="job-company">Wireless Warehouse | ThinkBizAI</div>
-                    </div>
-                    <div class="job-date">Sep 2025 - Present</div>
-                </div>
-                <ul class="job-desc">
-                    <li>Own full-funnel acquisition strategy across Google Shopping, Meta, and TikTok platforms, driving retail revenue metrics.</li>
-                    <li>Deployed advanced data automation pipelines using n8n, saving 40% in manual overhead costs[cite: 2].</li>
-                    <li>Sustain cohesive visual brand ecosystems across 5 independent vertical sectors[cite: 1, 2].</li>
-                </ul>
-            </div>
-
-            <div class="job-block">
-                <div class="job-header">
-                    <div>
-                        <div class="job-title">Digital Marketing Specialist & Partner Manager</div>
-                        <div class="job-company">Crosspay Ltd (United Kingdom)</div>
-                    </div>
-                    <div class="job-date">Jun 2022 - Sep 2024</div>
-                </div>
-                <ul class="job-desc">
-                    <li>Generated record-breaking platform growth numbers, driving up historical ROI indices[cite: 1, 2].</li>
-                    <li>Programmed lifecycle lead nurture engines in Salesforce Pardot with a 65% email open execution rate[cite: 1, 2].</li>
-                    <li>Boosted overall organic web discovery footprints by 40% inside of a 12-month period[cite: 1, 2].</li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- BOX 6: ACQUISITION CONSULTING SHOWCASE -->
-        <div class="box box-consulting">
-            <div class="section-title"><i class="fa-solid fa-chess-knight"></i> Specialized Acquisition Consulting</div>
-            <div class="job-block" style="padding:0; border:none; margin-bottom:15px;">
-                <span class="job-company">My Gold Wallet (UAE)</span>
-                <p style="font-size:0.9rem; color:var(--text-muted); margin-top:4px;">Launched full mobile acquisition tracking setups using Firebase SDK and GA4, establishing a clear 120% growth in client ROI metrics[cite: 2].</p>
-            </div>
-            <div class="job-block" style="padding:0; border:none;">
-                <span class="job-company">H.R. Mental Wellness Centre (Canada)</span>
-                <p style="font-size:0.9rem; color:var(--text-muted); margin-top:4px;">Optimized core performance keywords and campaign parameters across major ad channels, scaling baseline click-through rates by 25%[cite: 2].</p>
-            </div>
-        </div>
-
-        <!-- BOX 7: EDUCATION & CREDENTIALS -->
-        <div class="box box-education">
-            <div class="section-title"><i class="fa-solid fa-user-graduate"></i> Credentials</div>
-            <p style="font-size: 0.95rem; margin-bottom: 15px;">
-                <strong>B.Tech Information Technology</strong><br>
-                <span style="color:var(--text-muted);">Anna University — <small style="color:var(--accent-blue); font-weight:600;">Gold Medalist (Ranked 1st)</small></span>[cite: 2]
-            </p>
-            <p style="font-size: 0.95rem;">
-                <strong>Digital Marketing Management</strong><br>
-                <span style="color:var(--text-muted);">University of Toronto Mississauga</span>[cite: 1, 2]
-            </p>
-        </div>
-
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero-left">
+      <p class="hero-eyebrow">
+        <span class="hero-eyebrow-dot"></span>
+        Senior Digital Growth Consultant · Remote · Canada
+      </p>
+      <h1>Brands grow when strategy meets <em>precision</em>.</h1>
+      <p class="hero-sub">
+        I partner with E-Commerce, Fintech, and B2B brands to build acquisition engines, 
+        automate growth systems, and turn media spend into measurable revenue — not just impressions.
+      </p>
+      <div class="hero-actions">
+        <a href="#impact" class="btn-primary">See My Impact</a>
+        <a href="#contact" class="btn-ghost">Work Together</a>
+      </div>
     </div>
 
-    <footer style="text-align: center; margin-top: 40px; color: var(--text-muted); font-size: 0.85rem;">
-        &copy; 2026 Subitchaka Nagasundaram. Crafted using lightweight code structures.
-    </footer>
+    <div class="hero-right">
+      <div class="hero-value-card">
+        <div class="hvc-icon rose">📈</div>
+        <div class="hvc-body">
+          <div class="hvc-label">Revenue Growth</div>
+          <div class="hvc-title">Full-Funnel Acquisition Strategy</div>
+          <div class="hvc-desc">From first click to closed sale — paid media, SEO, and CRO working as one system.</div>
+        </div>
+      </div>
+      <div class="hero-value-card">
+        <div class="hvc-icon sage">⚙️</div>
+        <div class="hvc-body">
+          <div class="hvc-label">Automation & Efficiency</div>
+          <div class="hvc-title">Marketing Systems That Scale</div>
+          <div class="hvc-desc">n8n workflows, lifecycle CRM, and automated reporting that remove bottlenecks and compound results.</div>
+        </div>
+      </div>
+      <div class="hero-value-card">
+        <div class="hvc-icon sand">🎯</div>
+        <div class="hvc-body">
+          <div class="hvc-label">Data & Attribution</div>
+          <div class="hvc-title">Decisions Backed by Real Numbers</div>
+          <div class="hvc-desc">GA4, Looker Studio, and attribution models that show exactly what's driving revenue.</div>
+        </div>
+      </div>
+    </div>
+  </header>
 
+  <!-- STATS STRIP -->
+  <div class="stats-strip">
+    <div class="stat-item">
+      <div class="stat-number" data-target="130" data-suffix="%">0%</div>
+      <div class="stat-label">ROI Growth Delivered<br/>Fintech Platform</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number" data-target="300" data-prefix="$" data-suffix="K+">$0K+</div>
+      <div class="stat-label">Monthly Ad Budget<br/>Under Management</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number" data-target="65" data-suffix="%">0%</div>
+      <div class="stat-label">Email Open Rate<br/>Lifecycle Campaigns</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number" data-target="10" data-suffix="+">0+</div>
+      <div class="stat-label">Years Driving<br/>Digital Growth</div>
+    </div>
+  </div>
+
+  <!-- INDUSTRIES / IMPACT -->
+  <section id="impact">
+    <p class="section-label fade-up">Industries Served</p>
+    <h2 class="section-title fade-up">Sectors I've Moved the Needle In</h2>
+    <p class="section-sub fade-up">
+      Every industry has a different growth constraint. I've worked inside six of them — 
+      and know exactly which levers to pull in each.
+    </p>
+    <div class="impact-grid">
+
+      <div class="impact-card rose fade-up">
+        <div class="ic-sector rose">E-Commerce & Retail</div>
+        <div class="ic-headline">Turning product catalogues into consistent revenue streams</div>
+        <div class="ic-body">
+          For multi-brand retail operations, I build Google Shopping infrastructure, 
+          optimise product feeds, and run Meta and TikTok acquisition campaigns 
+          calibrated to ROAS — not vanity metrics. I've managed high-SKU environments 
+          where inventory and campaign strategy must move together.
+        </div>
+        <div class="ic-metrics">
+          <span class="ic-metric">Google Shopping</span>
+          <span class="ic-metric">Meta & TikTok Ads</span>
+          <span class="ic-metric">ROAS Optimisation</span>
+          <span class="ic-metric">Feed Management</span>
+        </div>
+      </div>
+
+      <div class="impact-card sage fade-up">
+        <div class="ic-sector sage">Fintech & B2B Payments</div>
+        <div class="ic-headline">Accelerating digital transactions and partner acquisition</div>
+        <div class="ic-body">
+          In regulated, trust-dependent fintech environments, growth requires precision 
+          targeting and airtight lifecycle strategy. I delivered 130% ROI growth for a 
+          B2B payments platform by combining LinkedIn acquisition, Pardot nurture sequences, 
+          and co-branded campaigns with institutional partners.
+        </div>
+        <div class="ic-metrics">
+          <span class="ic-metric">130% ROI Growth</span>
+          <span class="ic-metric">Salesforce Pardot</span>
+          <span class="ic-metric">LinkedIn Ads</span>
+          <span class="ic-metric">B2B Lead Gen</span>
+        </div>
+      </div>
+
+      <div class="impact-card forest fade-up">
+        <div class="ic-sector forest">B2B SaaS & Tech</div>
+        <div class="ic-headline">Building demand generation engines for long sales cycles</div>
+        <div class="ic-body">
+          SaaS growth lives or dies in the middle of the funnel. I've built demand gen 
+          programmes that generated 500+ qualified leads per month, designed ABM-adjacent 
+          campaigns for enterprise targets, and built reporting frameworks that attribute 
+          revenue back to the channel and creative that actually worked.
+        </div>
+        <div class="ic-metrics">
+          <span class="ic-metric">500+ Leads/Month</span>
+          <span class="ic-metric">HubSpot CRM</span>
+          <span class="ic-metric">Demand Gen</span>
+          <span class="ic-metric">Pipeline Attribution</span>
+        </div>
+      </div>
+
+      <div class="impact-card sage fade-up">
+        <div class="ic-sector sage">Healthcare & Wellness</div>
+        <div class="ic-headline">Growing patient-facing brands with sensitivity and precision</div>
+        <div class="ic-body">
+          Healthcare marketing demands compliance awareness, empathetic messaging, 
+          and careful audience segmentation. I've driven digital engagement growth 
+          across hospital groups and wellness brands — building campaigns that convert 
+          without cutting corners on trust.
+        </div>
+        <div class="ic-metrics">
+          <span class="ic-metric">Google Ads</span>
+          <span class="ic-metric">30% Engagement Growth</span>
+          <span class="ic-metric">Audience Segmentation</span>
+        </div>
+      </div>
+
+      <div class="impact-card rose fade-up">
+        <div class="ic-sector rose">Non-Profit & Social Impact</div>
+        <div class="ic-headline">Maximum reach from minimal budgets</div>
+        <div class="ic-body">
+          Managed a $40K/month Google Ads Grant for a non-profit — achieving a 70% 
+          CTR improvement through disciplined keyword strategy. Also scaled 
+          e-commerce operations across Amazon, Shopify, and Etsy for artisan product 
+          lines, turning community storytelling into consistent sales.
+        </div>
+        <div class="ic-metrics">
+          <span class="ic-metric">70% CTR Improvement</span>
+          <span class="ic-metric">Google Grants</span>
+          <span class="ic-metric">Shopify & Etsy</span>
+        </div>
+      </div>
+
+      <div class="impact-card forest fade-up">
+        <div class="ic-sector forest">Fintech & Mobile Apps</div>
+        <div class="ic-headline">Launch-stage acquisition for emerging financial products</div>
+        <div class="ic-body">
+          At the product launch stage, every dollar must work harder. For a UAE-based 
+          gold-saving app, I architected the full acquisition strategy from zero — 
+          building channel infrastructure, tracking, and campaign frameworks that 
+          delivered 120% ROI growth in the first cycle.
+        </div>
+        <div class="ic-metrics">
+          <span class="ic-metric">120% ROI Growth</span>
+          <span class="ic-metric">App Acquisition</span>
+          <span class="ic-metric">Firebase & GA4</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- EXPERTISE -->
+  <section id="expertise">
+    <p class="section-label fade-up">What I Do</p>
+    <h2 class="section-title fade-up">Areas of Expertise</h2>
+    <p class="section-sub fade-up">Four disciplines, practised together — because growth problems are rarely just one thing.</p>
+    <div class="expertise-grid">
+
+      <div class="expertise-card fade-up">
+        <div class="exp-num">01</div>
+        <div>
+          <div class="exp-title">Paid Media & Performance Advertising</div>
+          <div class="exp-body">Cross-channel campaign strategy and hands-on execution across Google, Meta, TikTok, LinkedIn, Snapchat, and Amazon. I manage $300K+ monthly budgets with a focus on ROAS, CAC, and real revenue outcomes — not click-through rates.</div>
+          <div class="exp-tags">
+            <span class="exp-tag">Google Search & Shopping</span>
+            <span class="exp-tag">Meta Ads</span>
+            <span class="exp-tag">TikTok Ads</span>
+            <span class="exp-tag">LinkedIn Ads</span>
+            <span class="exp-tag">Programmatic</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="expertise-card fade-up">
+        <div class="exp-num">02</div>
+        <div>
+          <div class="exp-title">Marketing Automation & CRM</div>
+          <div class="exp-body">I build lifecycle systems that work while you sleep — n8n workflows, Pardot nurture journeys, HubSpot pipelines, and automated reporting that connects campaign performance to pipeline. A 65% email open rate doesn't happen by accident.</div>
+          <div class="exp-tags">
+            <span class="exp-tag">n8n</span>
+            <span class="exp-tag">Salesforce Pardot</span>
+            <span class="exp-tag">HubSpot CRM</span>
+            <span class="exp-tag">Email Lifecycle</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="expertise-card fade-up">
+        <div class="exp-num">03</div>
+        <div>
+          <div class="exp-title">Analytics, Attribution & Reporting</div>
+          <div class="exp-body">Marketing without attribution is guesswork. I implement GA4, GTM, Looker Studio, and Power BI setups that track the full customer journey — so budget decisions are backed by evidence, not intuition.</div>
+          <div class="exp-tags">
+            <span class="exp-tag">GA4 & GTM</span>
+            <span class="exp-tag">Looker Studio</span>
+            <span class="exp-tag">Power BI</span>
+            <span class="exp-tag">SQL</span>
+            <span class="exp-tag">Attribution Modelling</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="expertise-card fade-up">
+        <div class="exp-num">04</div>
+        <div>
+          <div class="exp-title">E-Commerce Growth & SEO</div>
+          <div class="exp-body">From product feed optimisation to technical SEO architecture to marketplace scaling across Amazon, Shopify, and Etsy — I build organic and commerce infrastructure that compounds over time, not just spikes during campaign windows.</div>
+          <div class="exp-tags">
+            <span class="exp-tag">Technical SEO</span>
+            <span class="exp-tag">Shopify</span>
+            <span class="exp-tag">Amazon</span>
+            <span class="exp-tag">CRO</span>
+            <span class="exp-tag">Product Feed Optimisation</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PORTFOLIO -->
+  <section id="portfolio">
+    <p class="section-label fade-up">Selected Work</p>
+    <h2 class="section-title fade-up">Projects & Case Studies</h2>
+    <p class="section-sub fade-up">Case studies, ad creatives, and campaign work — being documented now. Check back soon.</p>
+    <div class="portfolio-grid">
+
+      <div class="portfolio-card fade-up">
+        <div class="pc-thumb rose-bg">📈</div>
+        <div class="pc-body">
+          <div class="pc-tag">Fintech · Paid Media</div>
+          <div class="pc-title">130% ROI: B2B Fintech Acquisition Campaign</div>
+          <div class="pc-desc">Full-funnel paid strategy combining LinkedIn, Google, and Meta to drive digital transactions and app growth for a UK payments platform.</div>
+          <span class="pc-badge">Case Study Coming Soon</span>
+        </div>
+      </div>
+
+      <div class="portfolio-card fade-up">
+        <div class="pc-thumb sage-bg">⚙️</div>
+        <div class="pc-body">
+          <div class="pc-tag">E-Commerce · Automation</div>
+          <div class="pc-title">Multi-Brand n8n Workflow: Inventory to Campaign</div>
+          <div class="pc-desc">Automated pipeline connecting live inventory data to ad campaigns and lifecycle emails — cutting operational overhead by 40%.</div>
+          <span class="pc-badge">Case Study Coming Soon</span>
+        </div>
+      </div>
+
+      <div class="portfolio-card fade-up">
+        <div class="pc-thumb sand-bg">✉️</div>
+        <div class="pc-body">
+          <div class="pc-tag">CRM · Lifecycle</div>
+          <div class="pc-title">Pardot Nurture Programme: 65% Open Rate</div>
+          <div class="pc-desc">Designed and implemented segmented email journeys that achieved a 65% open rate and 10% conversion — well above industry benchmarks.</div>
+          <span class="pc-badge">Case Study Coming Soon</span>
+        </div>
+      </div>
+
+      <div class="portfolio-card fade-up">
+        <div class="pc-thumb rose-bg">🛒</div>
+        <div class="pc-body">
+          <div class="pc-tag">E-Commerce · Google Shopping</div>
+          <div class="pc-title">Retail Growth Strategy: Wireless Warehouse</div>
+          <div class="pc-desc">End-to-end Google Shopping, Meta, and TikTok strategy for a high-SKU consumer electronics brand — ROAS-first, data-driven.</div>
+          <span class="pc-badge">Case Study Coming Soon</span>
+        </div>
+      </div>
+
+      <div class="portfolio-card fade-up">
+        <div class="pc-thumb sage-bg">🔍</div>
+        <div class="pc-body">
+          <div class="pc-tag">SEO · Organic Growth</div>
+          <div class="pc-title">40% Organic Traffic Growth in 12 Months</div>
+          <div class="pc-desc">Technical SEO and content strategy delivering sustained organic traffic growth through search intent mapping and on-page architecture.</div>
+          <span class="pc-badge">Case Study Coming Soon</span>
+        </div>
+      </div>
+
+      <div class="portfolio-card fade-up">
+        <div class="pc-thumb sand-bg">🎨</div>
+        <div class="pc-body">
+          <div class="pc-tag">Creative · Social Ads</div>
+          <div class="pc-title">Ad Creative Portfolio</div>
+          <div class="pc-desc">Social media ad creatives, landing page designs, and campaign visual assets across e-commerce, wellness, and fintech verticals.</div>
+          <span class="pc-badge">Portfolio Coming Soon</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <p class="section-label fade-up">Get In Touch</p>
+    <h2 class="section-title fade-up">Let's Solve Something Together</h2>
+    <p class="section-sub fade-up">
+      If you're looking for a growth partner who can diagnose the problem, 
+      build the system, and stay accountable to the numbers — let's talk.
+    </p>
+    <div class="contact-ctas fade-up">
+      <a href="mailto:subis.na@gmail.com" class="btn-light">subis.na@gmail.com</a>
+      <a href="https://linkedin.com/in/subitchaka-n-318394120" target="_blank" rel="noopener" class="btn-ghost-lt">LinkedIn Profile</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <span class="footer-logo">Subitchaka.</span>
+    <p>© 2026 Subitchaka Nagasundaram · Brampton, ON, Canada · All rights reserved.</p>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script>
+    // Counter animation
+    function animateCounter(el) {
+      const target   = +el.dataset.target;
+      const prefix   = el.dataset.prefix || '';
+      const suffix   = el.dataset.suffix || '';
+      const duration = 1600;
+      const steps    = duration / 16;
+      let current    = 0;
+      const inc      = target / steps;
+      const timer    = setInterval(() => {
+        current += inc;
+        if (current >= target) { current = target; clearInterval(timer); }
+        el.textContent = prefix + Math.round(current) + suffix;
+      }, 16);
+    }
+
+    const statsStrip = document.querySelector('.stats-strip');
+    let countersRan  = false;
+    new IntersectionObserver(entries => {
+      if (entries[0].isIntersecting && !countersRan) {
+        countersRan = true;
+        document.querySelectorAll('.stat-number[data-target]').forEach(animateCounter);
+      }
+    }, { threshold: 0.3 }).observe(statsStrip);
+
+    // Scroll fade-in
+    const fadeObs = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('visible'); fadeObs.unobserve(e.target); }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-up').forEach(el => fadeObs.observe(el));
+  </script>
 </body>
 </html>
